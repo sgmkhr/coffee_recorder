@@ -1,6 +1,30 @@
 ja:
+# ここから
+  enums:
+  headings:
+    signup: '新規登録'
+    login: 'ログイン'
+  links:
+    logout: 'ログアウト'
+    menu: 'メニュー'
+    mypage: 'マイページ'
+    signup: '新規登録'
+    login: 'ログイン'
+    home: 'ホーム'
+    about: 'アバウト'
+    admin: '管理者ログイン'
+  homes:
+    top:
+      welcome: 'ようこそ。Coffee Recorder へ。'
+    about:
+      first_line: 'コーヒーショップを巡ったり、自宅でも豆を挽いたり、'
+      second_line: '様々な種類のコーヒーに出会う日常を過ごしていると、'
+      third_line: 'せっかく出会えた味わいを記録して、美味しいショップや商品はシェアしたいという気持ちが募るものです。'
+      fourth_line: '世の中のコーヒー好きやマニアの方々に向けた、味わいを記録するためのサイトです。'
+# ここまで　追加分
   activerecord:
     errors:
+      count: '件のエラー' #追加
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
         restrict_dependent_destroy:
@@ -16,7 +40,7 @@ ja:
     - 金
     - 土
     abbr_month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -42,7 +66,7 @@ ja:
       long: "%Y年%m月%d日(%a)"
       short: "%m/%d"
     month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月

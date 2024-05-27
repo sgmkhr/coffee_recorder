@@ -1,5 +1,5 @@
 <% if obj.errors.any? %>
-  <%= obj.errors.count %>件のエラー
+  <%= obj.errors.count + I18n.t('activerecord.errors.count') %>
   <ul>
     <% obj.errors.full_messages.each do |message| %>
       <li><%= message %></li>
