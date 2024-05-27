@@ -1,0 +1,55 @@
+<div class='row d-flex justify_content-center'>
+  <%= form_with model: coffee do |f| %>
+    <div class='form-group'>
+      <%= f.label :name, coffee.human_attribute_name(:name) %></br>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :shop, coffee.human_attribute_name(:shop) %></br>
+      <%= f.text_field :shop, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :place, coffee.human_attribute_name(:place) %></br>
+      <%= f.select :place, [[I18n.t('enums.coffee.place.home'),0],[[I18n.t('enums.coffee.place.shop'),1],[I18n.t('enums.coffee.place.outside'),2],[I18n.t('enums.coffee.place.other'),3]], class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :acidit_rate, coffee.human_attribute_name(:acidit_rate) %></br>
+      <%= f.select :acidit_rate, [[I18n.t('enums.coffee.acidit_rate.very_strong'),0],[[I18n.t('enums.coffee.acidit_rate.strong'),1],[I18n.t('enums.coffee.acidit_rate.moderate'),2],[I18n.t('enums.coffee.acidit_rate.weak'),3],[I18n.t('enums.coffee.acidit_rate.very_weak'),4]], class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :richness_rate, coffee.human_attribute_name(:richness_rate) %></br>
+      <%= f.select :richness_rate, [[I18n.t('enums.coffee.richness_rate.very_strong'),0],[[I18n.t('enums.coffee.richness_rate.strong'),1],[I18n.t('enums.coffee.richness_rate.moderate'),2],[I18n.t('enums.coffee.richness_rate.weak'),3],[I18n.t('enums.coffee.richness_rate.very_weak'),4]], class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :bitterness_rate, coffee.human_attribute_name(:bitterness_rate) %></br>
+      <%= f.select :bitterness_rate, [[I18n.t('enums.coffee.bitterness_rate.very_strong'),0],[[I18n.t('enums.coffee.bitterness_rate.strong'),1],[I18n.t('enums.coffee.bitterness_rate.moderate'),2],[I18n.t('enums.coffee.bitterness_rate.weak'),3],[I18n.t('enums.coffee.bitterness_rate.very_weak'),4]], class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label :total_rate, coffee.human_attribute_name(:total_rate) %></br>
+      <%= f.select :total_rate, [[I18n.t('enums.coffee.total_rate.fantastic'),0],[[I18n.t('enums.coffee.total_rate.great'),1],[I18n.t('enums.coffee.total_rate.good'),2],[I18n.t('enums.coffee.total_rate.normal'),3],[I18n.t('enums.coffee.total_rate.bad'),4],[I18n.t('enums.coffee.total_rate.worst'),5]], class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <div id='flavor_tag_form'>
+        <%= render 'public/flavor_tags/form', flavor_tag: flavor_tag, coffee: coffee %>
+      </div>
+      <div id='flavor_tag_list'>
+        <%= render 'public/flavor_tags/list', tags: coffee.flavor_tags %>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div id='perfume_tag_form'>
+        <%= render 'public/perfume_tags/form', perfume_tag: perfume_tag, coffee: coffee %>
+      </div>
+      <div id='perfume_tag_list'>
+        <%= render 'public/perfume_tags/list', tags: coffee.perfume_tags %>
+      </div>
+    </div>
+    <div class='form-group'>
+      <%= f.label :introduction, coffee.human_attribute_name(:introduction) %></br>
+      <%= f.text_area :introduction, class: 'form-control' %>
+    </div>
+    <div class='form-control'>
+      <%= f.submit btn, class: 'btn btn-success' %>
+    </div>
+  <% end %>
+</div>

@@ -4,6 +4,8 @@ class Public::CoffeesController < ApplicationController
   
   def new
     @coffee = Coffee.new
+    @flavor_tag = FlavorTag.new
+    @perfume_tag = PerfumeTag.new
   end
   
   def create
@@ -17,7 +19,13 @@ class Public::CoffeesController < ApplicationController
   end
 
   def index
-    @coffees = Coffees.all
+    if params[:perfume_tag_id].presence?
+      @coffees = RelatedPerfumeTag.where(perfume_tag_id: params[:perfume_tag_id]).coffees
+    elsif params[:perfume_tag_id].presence?
+      @coffees = RelatedFlavorTag.where(flavor_tag_id: params[:flavor_tag_id]).coffees
+    else
+      @coffees = Coffees.all
+    end
   end
   
   def show
@@ -26,6 +34,8 @@ class Public::CoffeesController < ApplicationController
 
   def edit
     @coffee = Coffee.find(params[:id])
+    @flavor_tag = FlavorTag.new
+    @perfume_tag = PerfumeTag.new
     
   end
   

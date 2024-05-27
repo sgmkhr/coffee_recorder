@@ -51,6 +51,24 @@ ja:
       second_line: '様々な種類のコーヒーに出会う日常を過ごしていると、'
       third_line: 'せっかく出会えた味わいを記録して、美味しいショップや商品はシェアしたいという気持ちが募るものです。'
       fourth_line: '世の中のコーヒー好きやマニアの方々に向けた、味わいを記録するためのサイトです。'
+  coffees:
+    index:
+      heading: 'コーヒーの記録一覧'
+      link_to_all: 'すべてのコーヒーを表示'
+    show:
+      heading: 'コーヒー詳細'
+      flavor_tag: '風味'
+      perfume_tag: '香り'
+    new:
+      heading: '新しいコーヒーを記録する'
+    form:
+      add: '追加'
+      create: '作成'
+      update: '更新'
+    edit:
+      destroy:
+        btn: 'この記録を削除する'
+        confirmation: '本当に削除していいですか？'
   flash:
     users:
       update: '登録情報を更新しました。'
@@ -59,8 +77,21 @@ ja:
       update: 'コーヒーの記録内容を更新しました。'
       destroy: 'コーヒーの記録を削除しました。'
       ensure: '他の人のコーヒー記録は編集できません。'
-# ここまで　追加分
   activerecord:
+    models:
+      coffee: 'コーヒー'
+      user: 'ユーザー'
+      admin: '管理者'
+    attributes:
+      coffee:
+        name: 'コーヒー名'
+        shop: 'コーヒーを購入したお店'
+        place: 'コーヒーを味わった場所'
+        introduction: '紹介'
+        total_rate: '総合評価'
+        acidit_rate: '酸味'
+        richness_rate: 'コク'
+        bitterness_rate: '苦味'# ここまで　追加分
     errors:
       count: '件のエラー' #追加
       messages:

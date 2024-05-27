@@ -1,0 +1,4 @@
+<%= form_with model: [coffee, flavor_tag] do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit I18n.t('coffees.form.add'), class: 'btn btn-sm btn-secondary' %>
+<% end %>

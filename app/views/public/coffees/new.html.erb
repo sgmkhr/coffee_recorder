@@ -1,2 +1,6 @@
-<h1>Public::Coffees#new</h1>
-<p>Find me in app/views/public/coffees/new.html.erb</p>
+<div class='container'>
+  <div class='heading-title'>
+    <h1 class='headind-text'><%= I18n.t('coffees.new.heading') %></h1>
+  </div>
+  <%= render 'public/coffees/form', coffee: @coffee, flavor_tag: @flavor_tag, perfume_tag: @perfume_tag, btn: I18n.t('coffees.form.create') %>
+</div>

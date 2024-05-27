@@ -1,2 +1,7 @@
-<h1>Public::Coffees#edit</h1>
-<p>Find me in app/views/public/coffees/edit.html.erb</p>
+<div class='container'>
+  <div class='heading-title'>
+    <h1 class='headind-text'><%= I18n.t('coffees.new.heading') %></h1>
+  </div>
+  <%= render 'public/coffees/form', coffee: @coffee, flavor_tag: @flavor_tag, perfume_tag: @perfume_tag, btn: I18n.t('coffees.form.update') %>
+  <%= link_to I18n.t('coffees.edit.destroy.btn'), coffee_path(@coffee.id), method: :delete, class: 'btn btn-sm btn-secondary', 'data-confirmation' => I18n.t('coffees.edit.destroy.confirmation') %>
+</div>

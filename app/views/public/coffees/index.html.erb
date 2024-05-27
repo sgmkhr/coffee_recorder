@@ -1,2 +1,19 @@
-<h1>Public::Coffees#index</h1>
-<p>Find me in app/views/public/coffees/index.html.erb</p>
+<div class='container'>
+  <div class='heading-title'>
+    <h1 class='headind-text'><%= I18n.t('coffees.index.heading') %></h1>
+  </div>
+  <p class='text-center'><%= link_to I18n.t('coffees.index.link_to_all'), coffees_path %></p>
+  <div class='row p-5 d-flex'>
+    <% @coffees.each do |coffee| %>
+      <div class='card mr-2' style='width: 18rem;'>
+        <div class='card-body'>
+          <%= link_to coffee_path(coffee.id) do %>
+            <h5 class='card-title'><%= coffee.name %></h5>
+          <% end %>
+          <p class='card-text'><%= coffee.introduction %></p>
+          <sm class='pl-auto text-gray'><%= coffee.total_rate_i18n %></sm>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

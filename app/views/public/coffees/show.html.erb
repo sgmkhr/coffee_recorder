@@ -1,0 +1,53 @@
+<div class='container'>
+  <div class='heading-title'>
+    <h1 class='headind-text'><%= I18n.t('coffees.show.heading') %></h1>
+  </div>
+  <div class='row pt-5 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:name) %></p>
+    <p class='col-6'><%= @coffee.name %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:shop) %></p>
+    <p class='col-6'><%= @coffee.place %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:place) %></p>
+    <p class='col-6'><%= @coffee.place_i18n %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:total_rate) %></p>
+    <p class='col-6'><%= @coffee.total_rate_i18n %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:acidit_rate) %></p>
+    <p class='col-6'><%= @coffee.acidit_rate_i18n %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:richness_rate) %></p>
+    <p class='col-6'><%= @coffee.richness_rate_i18n %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:bitterness_rate) %></p>
+    <p class='col-6'><%= @coffee.bitterness_rate_i18n %></p>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= I18n.t('coffees.show.flavor_tag') %></p>
+    <div class='col-6 d-flex'>
+      <% @coffee.flavor_tags.each do |tag| %>
+        <%= link_to tag.name, coffees_path(flavor_tag_id: tag.id), class: 'btn btn-sm btn-secondary' %>
+      <% end %>
+    </div>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= I18n.t('coffees.show.perfume_tag') %></p>
+    <div class='col-6 d-flex'>
+      <% @coffee.perfume_tags.each do |tag| %>
+        <%= link_to tag.name, coffees_path(perfume_tag_id: tag.id), class: 'btn btn-sm btn-secondary' %>
+      <% end %>
+    </div>
+  </div>
+  <div class='row pt-1 d-flex justify-content-center'>
+    <p class='col-4'><%= @coffee.human_attribute_name(:introduction) %></p>
+    <p class='col-6'><%= @coffee.introduction %></p>
+  </div>
+</div>
