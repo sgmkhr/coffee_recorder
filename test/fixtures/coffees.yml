@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  shop: MyString
+  introduction: MyText
+  total_rate: 1
+  flavor_rate: 1
+  acidit_rate: 1
+  richness_rate: 1
+  bitterness_rate: 1
+  perfume_rate: 1
+
+two:
+  user: two
+  name: MyString
+  shop: MyString
+  introduction: MyText
+  total_rate: 1
+  flavor_rate: 1
+  acidit_rate: 1
+  richness_rate: 1
+  bitterness_rate: 1
+  perfume_rate: 1

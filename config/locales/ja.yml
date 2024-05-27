@@ -1,6 +1,36 @@
 ja:
 # ここから
   enums:
+    coffee:
+      place:
+        home: '自宅'
+        shop: 'お店'
+        outside: '屋外'
+        other: 'その他'
+      total_rate:
+        fantastic: '素晴らしい'
+        grest: 'とても美味しい'
+        good: '美味しい'
+        bad: 'あんまり'
+        worst: '嫌い'
+      acidit_rate:
+        very_strong: 'とても強い'
+        strong: '強い'
+        moderate: '適度'
+        weak: '弱い'
+        very_weak: 'とても弱い'
+      richness_rate:
+        very_strong: 'とても強い'
+        strong: '強い'
+        moderate: '適度'
+        weak: '弱い'
+        very_weak: 'とても弱い'
+      bitterness_rate:
+        very_strong: 'とても強い'
+        strong: '強い'
+        moderate: '適度'
+        weak: '弱い'
+        very_weak: 'とても弱い'
   headings:
     signup: '新規登録'
     login: 'ログイン'
@@ -21,6 +51,14 @@ ja:
       second_line: '様々な種類のコーヒーに出会う日常を過ごしていると、'
       third_line: 'せっかく出会えた味わいを記録して、美味しいショップや商品はシェアしたいという気持ちが募るものです。'
       fourth_line: '世の中のコーヒー好きやマニアの方々に向けた、味わいを記録するためのサイトです。'
+  flash:
+    users:
+      update: '登録情報を更新しました。'
+    coffees:
+      create: '新しいコーヒーを記録しました。'
+      update: 'コーヒーの記録内容を更新しました。'
+      destroy: 'コーヒーの記録を削除しました。'
+      ensure: '他の人のコーヒー記録は編集できません。'
 # ここまで　追加分
   activerecord:
     errors:

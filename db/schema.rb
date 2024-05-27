@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_05_26_051547) do
+ActiveRecord::Schema.define(version: 2024_05_27_054119) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -52,6 +52,51 @@ ActiveRecord::Schema.define(version: 2024_05_26_051547) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "coffees", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "name"
+    t.string "shop"
+    t.integer "place"
+    t.text "introduction"
+    t.integer "total_rate"
+    t.integer "acidit_rate"
+    t.integer "richness_rate"
+    t.integer "bitterness_rate"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_coffees_on_user_id"
+  end
+
+  create_table "flavor_tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "perfume_tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "related_flavor_tags", force: :cascade do |t|
+    t.integer "flavor_tag_id", null: false
+    t.integer "coffee_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["coffee_id"], name: "index_related_flavor_tags_on_coffee_id"
+    t.index ["flavor_tag_id"], name: "index_related_flavor_tags_on_flavor_tag_id"
+  end
+
+  create_table "related_perfume_tags", force: :cascade do |t|
+    t.integer "perfume_tag_id", null: false
+    t.integer "coffee_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["coffee_id"], name: "index_related_perfume_tags_on_coffee_id"
+    t.index ["perfume_tag_id"], name: "index_related_perfume_tags_on_perfume_tag_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -70,4 +115,9 @@ ActiveRecord::Schema.define(version: 2024_05_26_051547) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "coffees", "users"
+  add_foreign_key "related_flavor_tags", "coffees"
+  add_foreign_key "related_flavor_tags", "flavor_tags"
+  add_foreign_key "related_perfume_tags", "coffees"
+  add_foreign_key "related_perfume_tags", "perfume_tags"
 end
