@@ -14,23 +14,23 @@ ja:
         bad: 'あんまり'
         worst: '嫌い'
       acidit_rate:
-        very_strong: 'とても強い'
-        strong: '強い'
-        moderate: '適度'
-        weak: '弱い'
-        very_weak: 'とても弱い'
+        acidit_very_strong: 'とても強い'
+        acidit_strong: '強い'
+        acidit_moderate: '適度'
+        acidit_weak: '弱い'
+        acidit_very_weak: 'とても弱い'
       richness_rate:
-        very_strong: 'とても強い'
-        strong: '強い'
-        moderate: '適度'
-        weak: '弱い'
-        very_weak: 'とても弱い'
+        richness_very_strong: 'とても強い'
+        richness_strong: '強い'
+        richness_moderate: '適度'
+        richness_weak: '弱い'
+        richness_very_weak: 'とても弱い'
       bitterness_rate:
-        very_strong: 'とても強い'
-        strong: '強い'
-        moderate: '適度'
-        weak: '弱い'
-        very_weak: 'とても弱い'
+        bitterness_very_strong: 'とても強い'
+        bitterness_strong: '強い'
+        bitterness_moderate: '適度'
+        bitterness_weak: '弱い'
+        bitterness_very_weak: 'とても弱い'
   headings:
     signup: '新規登録'
     login: 'ログイン'
@@ -59,6 +59,7 @@ ja:
       heading: 'コーヒー詳細'
       flavor_tag: '風味'
       perfume_tag: '香り'
+      back: 'コーヒー一覧へ戻る'
     new:
       heading: '新しいコーヒーを記録する'
     form:
@@ -69,6 +70,10 @@ ja:
       destroy:
         btn: 'この記録を削除する'
         confirmation: '本当に削除していいですか？'
+  users:
+    index:
+      heading: 'ユーザー一覧'
+      count: 'コーヒー記録数：'
   flash:
     users:
       update: '登録情報を更新しました。'

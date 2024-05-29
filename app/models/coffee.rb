@@ -15,9 +15,9 @@ class Coffee < ApplicationRecord
 
   enum place: { home: 0, shop: 1, outside: 2, other: 3 }
   enum total_rate: { fantastic: 0, great: 1, good: 2, normal: 3, bad: 4, worst: 5 }
-  enum acidit_rate: { very_strong: 0, strong: 1, moderate: 2, weak: 3, very_weak: 4 }
-  enum richness_rate: { very_strong: 0, strong: 1, moderate: 2, weak: 3, very_weak: 4 }
-  enum bitterness_rate: { very_strong: 0, strong: 1, moderate: 2, weak: 3, very_weak: 4 }
+  enum acidit_rate: { acidit_very_strong: 0, acidit_strong: 1, acidit_moderate: 2, acidit_weak: 3, acidit_very_weak: 4 }
+  enum richness_rate: { richness_very_strong: 0, richness_strong: 1, richness_moderate: 2, richness_weak: 3, richness_very_weak: 4 }
+  enum bitterness_rate: { bitterness_very_strong: 0, bitterness_strong: 1, bitterness_moderate: 2, bitterness_weak: 3, bitterness_very_weak: 4 }
 
   def get_coffee_image
 	　unless coffee_image.attached?(width, height)

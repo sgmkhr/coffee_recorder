@@ -11,7 +11,7 @@
             <h5 class='card-title'><%= coffee.name %></h5>
           <% end %>
           <p class='card-text'><%= coffee.introduction %></p>
-          <sm class='pl-auto text-gray'><%= coffee.total_rate_i18n %></sm>
+          <sm class='pl-auto text-gray'><%= Coffee.human_attribute_name(:total_rate) + ':' + coffee.total_rate_i18n %></sm>
         </div>
       </div>
     <% end %>

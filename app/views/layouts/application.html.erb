@@ -13,7 +13,7 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <main>
+    <main class='mb-auto'>
       <p class='text-success text-center --bs-success-bg-subtle'><%= flash[:notice] %></p>
       <p class='text-danger text-center --bs-danger-bg-subtle'><%= flash[:caution] %></p>
       <%= yield %>

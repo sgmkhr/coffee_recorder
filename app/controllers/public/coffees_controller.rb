@@ -19,12 +19,12 @@ class Public::CoffeesController < ApplicationController
   end
 
   def index
-    if params[:perfume_tag_id].presence?
+    if params[:perfume_tag_id].present?
       @coffees = RelatedPerfumeTag.where(perfume_tag_id: params[:perfume_tag_id]).coffees
-    elsif params[:perfume_tag_id].presence?
+    elsif params[:perfume_tag_id].present?
       @coffees = RelatedFlavorTag.where(flavor_tag_id: params[:flavor_tag_id]).coffees
     else
-      @coffees = Coffees.all
+      @coffees = Coffee.all
     end
   end
   
