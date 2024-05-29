@@ -25,7 +25,7 @@ class Public::UsersController < ApplicationController
   def withdraw
     current_user.update(is_active: false)
     reset_session
-    redirect_to root_path
+    redirect_to root_path, notice: I18n.t('flash.users.withdraw')
   end
   
   private

@@ -13,9 +13,11 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <p class='text-success'><%= flash[:notice] %></p>
-    <p class='text-danger'><%= flash[:caution] %></p>
-    <%= yield %>
+    <main>
+      <p class='text-success text-center --bs-success-bg-subtle'><%= flash[:notice] %></p>
+      <p class='text-danger text-center --bs-danger-bg-subtle'><%= flash[:caution] %></p>
+      <%= yield %>
+    </main>
     <%= render 'layouts/footer' %>
   </body>
 </html>

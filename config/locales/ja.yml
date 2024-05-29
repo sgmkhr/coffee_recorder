@@ -72,6 +72,7 @@ ja:
   flash:
     users:
       update: '登録情報を更新しました。'
+      withdraw: '退会しました'
     coffees:
       create: '新しいコーヒーを記録しました。'
       update: 'コーヒーの記録内容を更新しました。'
